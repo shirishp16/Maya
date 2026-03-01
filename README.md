@@ -4,6 +4,10 @@ Maya is an AI-powered desktop assistant built for students at Ohio State Univers
 
 ---
 
+## Demo
+
+Link: https://youtu.be/NKmQnOfVuO0
+
 ## Features
 
 ### Career Engine
