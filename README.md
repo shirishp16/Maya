@@ -1,6 +1,6 @@
-# Sayam
+# Maya
 
-Sayam is an AI-powered desktop assistant built for students at Ohio State University. It automates two of the most time-consuming parts of student life — applying to internships and studying for exams — while also providing a live lecture notes tool. Built on Electron, React, and FastAPI with agentic browser automation.
+Maya is an AI-powered desktop assistant built for students at Ohio State University. It automates two of the most time-consuming parts of student life — applying to internships and studying for exams — while also providing a live lecture notes tool. Built on Electron, React, and FastAPI with agentic browser automation.
 
 ---
 
@@ -42,14 +42,14 @@ Records live lectures and converts them into persistent, searchable notes.
 - **Follow-up Q&A** — Ask questions about any session; GPT-4o answers using the notes as primary context and the raw transcript as a supplement.
 
 ### SMS Agent
-Allows Sayam to be used over text message via the Linq platform.
+Allows Maya to be used over text message via the Linq platform.
 
 - **Webhook integration** — An ngrok tunnel is started on backend launch, a Linq webhook is registered, and incoming messages are HMAC-verified before processing.
 - **Full state machine** — Supports multi-turn SMS conversations: intent detection, career/academic flows, quiz sessions (with answer tracking and scoring), and a STOP command to cancel running tasks.
 - **Bidirectional display** — SMS messages appear inline in the main chat alongside desktop messages, visually tagged with an SMS badge.
 
 ### Chat Interface
-The primary way to interact with Sayam.
+The primary way to interact with Maya.
 
 - **Intent classification** — Keyword-based zero-latency router sends messages to the correct engine (career, academic, study mode, confirm/decline flows).
 - **Thought boxes** — Agent execution steps stream in real time and can be expanded/collapsed inline in the chat.
@@ -206,13 +206,13 @@ On first launch, an onboarding wizard walks you through uploading your resume (P
 
 ### Applying to Internships
 1. Type *"Apply to SWE internships"* in the chat.
-2. Sayam proposes an action plan — confirm with *"yes"* to proceed.
+2. Maya proposes an action plan — confirm with *"yes"* to proceed.
 3. The backend scrapes SimplifyJobs, finds an open Greenhouse/Lever role, and asks whether to tailor your resume.
 4. Confirm or decline tailoring, then watch the `browser-use` agent fill the form autonomously in the embedded browser.
 5. Track the application in **Career Dashboard** (toolbar → CAREER).
 
 ### Studying for an Exam
-1. Type *"I have an exam for CSE 3244"* — Sayam shows a course picker card.
+1. Type *"I have an exam for CSE 3244"* — Maya shows a course picker card.
 2. Enter your course (e.g. `CSE 3244`), confirm to proceed.
 3. Log into Carmen in the embedded browser when prompted.
 4. The agent scrapes your lecture slides, builds a RAG index, and opens a Study Panel with key concepts.
@@ -230,13 +230,13 @@ Toggle the **Study** switch in the header (or type *"enter study mode"*) to bloc
 6. Double-click the session title to rename it.
 
 ### SMS (via Linq)
-If `LINQ_API_TOKEN` is set, Sayam registers a webhook on startup. Text your Linq number with the same phrases you'd type in the chat. Responses and the student's incoming messages appear in the desktop chat as well, tagged with an SMS badge.
+If `LINQ_API_TOKEN` is set, Maya registers a webhook on startup. Text your Linq number with the same phrases you'd type in the chat. Responses and the student's incoming messages appear in the desktop chat as well, tagged with an SMS badge.
 
 ---
 
 ## Database Schema
 
-SQLite file: `backend/sayam.db`
+SQLite file: `backend/Maya.db`
 
 | Table | Description |
 |---|---|
