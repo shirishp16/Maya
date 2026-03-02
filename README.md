@@ -4,6 +4,10 @@ Maya is an AI-powered desktop assistant built for students at Ohio State Univers
 
 ---
 
+## Awards
+
+Most Technical Award: IBM x OSU AI Hackathon 2026
+
 ## Demo
 
 Link: https://youtu.be/NKmQnOfVuO0
